@@ -1,4 +1,3 @@
-# Language: Python
 # Count Words in pdf
 
 import PyPDF2
@@ -13,6 +12,7 @@ def count_words_in_pdf(pdf_path):
     for i in range(num_pages):
         page = pdf_reader.getPage(i)
         count += len(re.findall(r'\w+', page.extract_text()))
-    return print(count)
+    # return print(count)
+    return count
 
 count_words_in_pdf(r'')
